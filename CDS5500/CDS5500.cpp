@@ -286,30 +286,29 @@ void CDS5500::SetTempLimit(int ID, int temperature){
 //reading incoming data from servo.
 int CDS5500::read_input() {
 		int i = 0;
-		byte incoming_Byte = 0;
+		byte Byte = 0;
 		byte Data_msg[5];
 		delayMicroseconds(300);
-		int Position_Long_Byte = -1;
-		int Time_Counter = 0;
-		while (Serial1.available() < 7 && Time_Counter < 10)
+		int Timer = 0;
+		while (Serial1.available() < 7 && Timer < 10)
 		{
-			Time_Counter++;
+			Timer++;
 			delayMicroseconds(1000);
 		}
 		while (Serial1.available() > 0)
 		{
-			incoming_Byte = Serial1.read();
-			if (incoming_Byte == 255)
+			Byte = Serial1.read();
+			if (Byte == 255)
 			{
-				incoming_Byte = Serial1.read();
-				if (incoming_Byte == 255)       //reading data only if we are getting the mask "255 255"
+				Byte = Serial1.read();
+				if (Byte == 255)       //reading data only if we are getting the mask "255 255"
 				{
 					for (int i = 0; i < 5; i++)
 						Data_msg[i] = Serial1.read();
 				}
 			}
 		}
-		//for(int i=0; i<5; i++){ Serial.print(Data_msg[i]); Serial.print(" "); } //to show all feedback
+		//for(int i=0; i<5; i++){ Serial.print(Data_msg[i]); Serial.print(" "); } //to show full feedback msg
 
 		return Data_msg[3]; //returning only important data. (First param from feedback)
 	
