@@ -222,10 +222,6 @@ int CDS5500::Get_Pos(int ID) {
 	byte pos_half_H = 0;      //variable for H byte
 	bool Data_quality = true; //variable for control quality through range of possible values
 	int pos = 0;
-	Get_Pos_H(ID);
-	pos_half_H=read_input();
-	Get_Pos_L(ID);
-	pos_half_L=read_input();
 	do {
 		Get_Pos_H(1);
 		pos_half_H = read_input();
