@@ -12,6 +12,7 @@
 	Get_Voltage(ID)
 	Get_Pos(ID)
 	Get_Temp(ID)
+	Get_Load(ID)
 
 
  */
