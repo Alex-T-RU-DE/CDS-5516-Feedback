@@ -3,6 +3,8 @@
  *
  *  Created on: Jun 7, 2011
  *      Author: Danfei Xu
+ 
+ 	modifed in november 2020 by Alex-T-RU-DE
  */
 #ifndef CDS5500_h
 #define CDS5500_h
