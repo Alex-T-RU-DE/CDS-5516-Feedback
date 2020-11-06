@@ -3,6 +3,19 @@
  *
  *  Created on: Jun 7, 2011
  *      Author: Danfei Xu
+  
+  Modified November 20, 2020 by Alexander Tadiashvili
+  new methods:
+  	float Get_Voltage(int ID);
+	void Get_Temp(int ID);
+	void Get_Load_H(int ID);
+	void Get_Load_L(int ID);
+	void Get_Pos_L(int ID);
+	void Get_Pos_H(int ID);
+	int Get_Pos(int ID);
+	int read_input();
+  	
+ 
  */
 #ifndef CDS5500_h
 #define CDS5500_h
