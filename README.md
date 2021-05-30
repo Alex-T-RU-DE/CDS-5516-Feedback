@@ -1,5 +1,5 @@
 # CDS-5516-Feedback
-This library was adapted for servos CDS 5516, which was used by the Hexapod Robot. This library could be used for some other CDS55 and "dynamixel" servos as well.
+This library was adapted for servos CDS 5516, which were used by the Hexapod Robot. This library could be used for some other CDS55 and "dynamixel" servos as well.
 You can find examples of using the methods.
 
 New features:
